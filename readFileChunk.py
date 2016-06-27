@@ -4,9 +4,8 @@ import os
 def fileLoader():
     fname = raw_input('Enter the file name: ')
     try:
-        global fhand
+        global fhand, sz
         fhand = open(fname)
-        global sz
         sz = os.path.getsize(fname)
     except:
         print 'File cannot be opened: ', fname
